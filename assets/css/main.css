@@ -210,6 +210,73 @@ input, select, textarea {
 		clear: both;
 	}
 
+	#container {
+		background-color: white;
+		display: flex;
+	}
+	#box-info {
+		background-color: white;
+		flex: 1;
+		order: 1;
+	}
+	#box-edu {
+		background-color: white;
+		flex: 1;
+		order: 2;
+	}
+	#box-skills {
+		background-color: white;
+		flex: 1;
+		order: 3;
+	}
+
+	#box-title {
+		background-color: #222629;
+		height: 16%;
+	}
+	#box-title b {
+		color: white;
+	}
+
+	#box-labels {
+		float: left;
+		text-align: right;
+		background-color: #f0f5f4;
+		flex: 1;
+		width: 40%;
+		font-size: 20px;
+		font-weight: bold;
+		height: 84%;
+		min-height: 140px;
+	}
+
+	#box-contents {
+		font-size: 20px;
+		text-align: left;
+		float: right;
+		background-color: white;
+		flex: 2;
+		width: 60%;
+		font-size: 18px;
+		min-height: 140px;
+	}
+
+	@media screen and (min-width: 1880px){
+		#box {
+			min-width: 26rem;
+		}
+	}
+	@media screen and (min-width: 1620px){
+		#box {
+			min-width: 22rem;
+		}
+	}
+	@media screen and (max-width: 1880px){
+		#container {
+			display: block;
+		}
+	}
+	
 /* Container */
 
 	.container {
@@ -1761,8 +1828,9 @@ input, select, textarea {
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				width: 75px;
+				height: 55px;
+				border-radius: 10px;
 			}
 
 		.image.fit {
@@ -1995,6 +2063,32 @@ input, select, textarea {
 				font-size: 1em;
 			}
 
+/* Tooltip */
+
+	.tooltip {
+		position: relative;
+		display: inline-block;
+  	}
+
+ 	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 230px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		padding: 0;
+		border-radius: 6px;
+   
+		/* Position the tooltip text - see examples below! */
+		position: absolute;
+		z-index: 1;
+		margin-left: 1rem;
+  	}
+
+  	.tooltip:hover .tooltiptext {
+		visibility: visible;
+  	}
+
 /* Icons */
 
 	.icon {
@@ -2097,7 +2191,7 @@ input, select, textarea {
 	#logo {
 		position: relative;
 		margin: 1.75em 1.5em 1.5em 1.5em;
-		min-height: 48px;
+		min-height: 65px;
 		cursor: default;
 	}
 
